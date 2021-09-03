@@ -14,8 +14,16 @@ export const ItemProvider = (props) => {
 
   const [items, setItems] = useState([])
 
+  const getData = () => {
+    axios
+      .get('http://localhost:3003/items')
+      .then((response) => {
+        setItems(response.data)
+      })
+  }
+
   return(
-    <ItemContext.Provider value={[items, setItems]}>
+    <ItemContext.Provider value={[items, setItems, getData]}>
       {props.children}
     </ItemContext.Provider>
   )

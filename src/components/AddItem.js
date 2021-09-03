@@ -4,18 +4,10 @@ import axios from 'axios'
 
 const AddItem = () => {
   const [item, setItem] = useState({name: '', brand: '', image: '', quantity: '', category: '', expiration: ''})
-  const [items, setItems] = useContext(ItemContext)
+  const [items, setItems, getData] = useContext(ItemContext)
 
   const handleChange = (event) => {
     setItem({...item, [event.target.name]:event.target.value})
-  }
-
-  const getData = () => {
-    axios
-      .get('http://localhost:3003/items')
-      .then((response) => {
-        setItems(response.data)
-      })
   }
 
   const addItem = (e) => {
