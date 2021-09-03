@@ -2,8 +2,8 @@ import React, {useContext, useState} from 'react'
 import {ItemContext} from '../contexts/ItemContext'
 import axios from 'axios'
 
-const UpdateItem = () => {
-  const [items, setItems] = useContext(ItemContext)
+const UpdateItem = (props) => {
+  const [items, setItems, getData] = useContext(ItemContext)
   const [name, setName] = useState('')
   const [brand, setBrand] = useState('')
   const [image, setImage] = useState('')
@@ -29,6 +29,51 @@ const UpdateItem = () => {
       })
   }
 
-  //NEED TO MAKE THE EDIT FORM HERE
+  const handleNewName = (event) => {
+    setName(event.target.value);
+  }
+  const handleNewBrand = (event) => {
+    setBrand(event.target.value);
+  }
+  const handleNewImage = (event) => {
+    setImage(event.target.value);
+  }
+  const handleNewQuantity = (event) => {
+    setQuantity(event.target.value);
+  }
+  const handleNewCategory = (event) => {
+    setCategory(event.target.value);
+  }
+  const handleNewExpiration = (event) => {
+    setExpiration(event.target.value);
+  }
+
+  return (
+    <details>
+      <form onSubmit={(event) => handleUpdate(event, props.item)}>
+        <label>Name: </label>
+        <input type="text" onChange={handleNewName} defaultValue={props.item.name} />
+        <br/>
+        <label>Brand: </label>
+        <input type="text" onChange={handleNewBrand} placeholder={props.item.brand} />
+        <br/>
+        <label>Image: </label>
+        <input type="text" onChange={handleNewImage} placeholder={props.item.image} />
+        <br/>
+        <label>Quantity: </label>
+        <input type="number" onChange={handleNewQuantity} placeholder={props.item.quantity} />
+        <br/>
+        <label>Category: </label>
+        <input type="text" onChange={handleNewCategory} placeholder={props.item.category} />
+        <br/>
+        <label>Expiration: </label>
+        <input type="date" onChange={handleNewExpiration} placeholder={props.item.expiration} />
+        <br/>
+        <input type="submit" />
+      </form>
+    </details>
+  )
 
 }
+
+export default UpdateItem

@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import {ItemContext} from '../contexts/ItemContext'
+import UpdateItem from './UpdateItem'
 import axios from 'axios'
 
 const Item = () => {
@@ -34,6 +35,7 @@ const Item = () => {
           <p>Category: {item.category}</p>
           <p>Expiration Date: {item.expiration}</p>
           <button onClick={() => handleDelete(item)}>Delete</button>
+          <UpdateItem item={item}/>
         </div>
       )
     })}
