@@ -64,7 +64,18 @@ const UpdateItem = (props) => {
         <input type="number" onChange={handleNewQuantity} placeholder={props.item.quantity} />
         <br/>
         <label>Category: </label>
-        <input type="text" onChange={handleNewCategory} placeholder={props.item.category} />
+        <select type="text" onChange={handleNewCategory} placeholder={props.item.category} >
+        <option>Fruits</option>
+        <option>Vegetables</option>
+        <option>Dairy</option>
+        <option>Eggs</option>
+        <option>Cheese</option>
+        <option>Meat & Seafood</option>
+        <option>Beverages</option>
+        <option>Condiments</option>
+        <option>Frozen</option>
+        <option>Miscellaneous</option>
+        </select>
         <br/>
         <label>Expiration: </label>
         <input type="date" onChange={handleNewExpiration} placeholder={props.item.expiration} />

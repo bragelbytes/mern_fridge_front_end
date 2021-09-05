@@ -13,7 +13,6 @@ const App = () => {
       <ItemProvider>
         <AddItem />
         <Item />
-        
       </ItemProvider>
     </>
   )

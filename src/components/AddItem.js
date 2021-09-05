@@ -46,12 +46,18 @@ const AddItem = () => {
         onChange={handleChange}
         placeholder="qty"
       />
-      <input
-        type="text"
-        name="category"
-        onChange={handleChange}
-        placeholder="category"
-      />
+      <select type="text" name="category" onChange={handleChange}>
+      <option>Fruits 🍇</option>
+      <option>Vegetables 🥕</option>
+      <option>Dairy 🥛</option>
+      <option>Eggs 🍳</option>
+      <option>Cheese 🧀</option>
+      <option>Meat & Seafood 🍗</option>
+      <option>Beverages 🥤</option>
+      <option>Leftovers 🥡</option>
+      <option>Frozen 🍦</option>
+      <option>Misc. 🍽️</option>
+      </select>
       <input
         type="date"
         name="expiration"

@@ -30,7 +30,7 @@ const Item = () => {
         <div>
           <h3>Name: {item.name}</h3>
           <p>Brand: {item.brand}</p>
-          <p>{item.image}</p>
+          {item.image}
           <p>Qty: x{item.quantity}</p>
           <p>Category: {item.category}</p>
           <p>Expiration Date: {item.expiration}</p>
