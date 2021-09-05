@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import {ItemContext} from '../contexts/ItemContext'
 import UpdateItem from './UpdateItem'
 import axios from 'axios'
+import images from '../itemImages.js'
 
 const Item = () => {
 
@@ -30,7 +31,7 @@ const Item = () => {
         <div>
           <h3>Name: {item.name}</h3>
           <p>Brand: {item.brand}</p>
-          {item.image}
+          <img src={images[item.category]}/>
           <p>Qty: x{item.quantity}</p>
           <p>Category: {item.category}</p>
           <p>Expiration Date: {item.expiration}</p>

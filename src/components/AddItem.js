@@ -35,12 +35,6 @@ const AddItem = () => {
         placeholder="brand"
       />
       <input
-        type="text"
-        name="image"
-        onChange={handleChange}
-        placeholder="image"
-      />
-      <input
         type="number"
         name="quantity"
         onChange={handleChange}

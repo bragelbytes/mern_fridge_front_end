@@ -1,3 +1,4 @@
+import './App.css'
 import { useState } from 'react'
 import Item from './components/Item'
 import AddItem from './components/AddItem'

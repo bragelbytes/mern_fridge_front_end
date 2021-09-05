@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* =========== MY CSS STARTS HERE ============== */
+img{
+  width: 200px;
+  height: auto;
+}
