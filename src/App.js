@@ -91,11 +91,59 @@ const App = () => {
 
   return (
     <>
+      <div className="top-nav">
+        <div>
+          {toggleLogout
+            ? <button onClick={handleLogout} class="logout-button">Logout</button>
+            : <div class="app-form">
+                {toggleLogin
+                  ? <div className="form">
+                      <h1>Login</h1>
+                      <form onSubmit={handleLogin} class="inputForm">
+                        <input type="text" placeholder="username" class="textInput"
+                        onChange={(event) => {setUsername(event.target.value)}}/>
+                        <input type="password" placeholder="password" class="textInput"
+                        onChange={(event) => {setPassword(event.target.value)}}/>
+                        {toggleError
+                          ? <h5>{errorMessage}</h5>
+                          : null
+                        }
+                        <input type="submit" value="login" class="submit-button"/>
+                      </form>
+                    </div>
+                  : <div className="top-nav" class="form">
+                      <h1>Create Account</h1>
+                      <form  onSubmit={handleCreateUser} class="inputForm">
+                        <input type="text" placeholder="username" class="textInput"
+                        onChange={(event) => {setUsername(event.target.value)}}/>
+                        <input type="text" placeholder="password" class="textInput"
+                        onChange={(event) => {setPassword(event.target.value)}}/>
+                        {toggleError
+                          ? <h5>{errorMessage}</h5>
+                          : null
+                        }
+                        <input type="submit" value="Register" class="submit-button"/>
+                      </form>
+                    </div>
+                  }
+                  <button onClick={handleToggleForm} class="account-button">
+                  {toggleLogin ? "Need an Account?" : "Already have an account?"}</button>
+                </div>
+                }
+              </div>
+
+
+      </div>
+      {currentUser.username ?
+      <>
       <h1>Items</h1>
       <ItemProvider>
         <AddItem />
         <Item />
       </ItemProvider>
+      </>
+      : null
+      }
     </>
   )
 }
