@@ -39,6 +39,22 @@
 
 /* =========== MY CSS STARTS HERE ============== */
 img{
-  width: 200px;
+  width: 100px;
   height: auto;
+}
+
+.itembox{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.item{
+  border-style: solid;
+  border-radius: 5px;
+  text-align: center;
+  width: 250px;
+  height: auto;
+  margin: 15px;
+  padding: 10px;
 }

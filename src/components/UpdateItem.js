@@ -57,9 +57,6 @@ const UpdateItem = (props) => {
         <label>Brand: </label>
         <input type="text" onChange={handleNewBrand} placeholder={props.item.brand} />
         <br/>
-        <label>Image: </label>
-        <input type="text" onChange={handleNewImage} placeholder={props.item.image} />
-        <br/>
         <label>Quantity: </label>
         <input type="number" onChange={handleNewQuantity} placeholder={props.item.quantity} />
         <br/>

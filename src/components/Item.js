@@ -26,20 +26,22 @@ const Item = () => {
 
   return (
     <>
-    {items.map((item) => {
-      return (
-        <div>
-          <h3>Name: {item.name}</h3>
-          <p>Brand: {item.brand}</p>
-          <img src={images[item.category]}/>
-          <p>Qty: x{item.quantity}</p>
-          <p>Category: {item.category}</p>
-          <p>Expiration Date: {item.expiration}</p>
-          <button onClick={() => handleDelete(item)}>Delete</button>
-          <UpdateItem item={item}/>
-        </div>
+    <div class="itembox">
+      {items.map((item) => {
+        return (
+          <div class="item">
+            <h3>Name: {item.name}</h3>
+            <p>Brand: {item.brand}</p>
+            <img src={images[item.category]}/>
+            <p>Qty: x{item.quantity}</p>
+            <p>Category: {item.category}</p>
+            <p>Exp. Date: {item.expiration.slice(-25, -14)}</p>
+            <button onClick={() => handleDelete(item)}>Delete</button>
+            <UpdateItem item={item}/>
+          </div>
       )
     })}
+    </div>
     </>
   )
 }
