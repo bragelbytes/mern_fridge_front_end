@@ -30,7 +30,9 @@ const Item = () => {
       {items.map((item) => {
         return (
           <div className="item">
-            <img src={images[item.category]}/>
+            <div className="icon">
+              <img src={images[item.category]}/>
+            </div>
             <div className="item-info">
               <h3>{item.name}</h3>
               <p>Brand: {item.brand}</p>

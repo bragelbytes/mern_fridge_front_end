@@ -9,9 +9,10 @@ const List = () => {
   return(
     <>
     <div className="listbox">
+      <h3>Shopping List</h3>
       {list.map((item) => {
         return(
-          <div className="item">
+          <div className="list-item">
             <img src={images[item.category]}/>
             <div className="item-info">
               <h3>{item.name}</h3>

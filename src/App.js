@@ -143,8 +143,10 @@ const App = () => {
       <h1>MERN Fridge</h1>
       <ItemProvider>
         <AddItem />
-        <Item />
-        <List />
+        <div className="main-container">
+          <Item />
+          <List />
+        </div>
       </ItemProvider>
       </>
       : null

@@ -55,19 +55,13 @@ img{
   justify-content: center;
 }
 
-.item{
-  text-align: center;
-  width: 250px;
-  height: auto;
-  margin: 5px;
-  padding-top: 10px;
+.icon{
   background-color: white;
 }
 
 .item-info{
   background-color: #f1f1f1;
-  padding: 5px;
-  width: 239px;
+  width: 249px;
 }
 
 .item, .item-info{
@@ -75,6 +69,13 @@ img{
   border-style: solid;
   border-width: 1px;
   border-color: #f1f1f1;
+  text-align: center;
+}
+
+.item{
+  margin: 5px;
+  width: 250px;
+  height: 250px;
 }
 
 p{
@@ -96,4 +97,31 @@ p{
 
 label{
   padding: 2px;
+}
+
+.list-item{
+  margin: 5px;
+  box-shadow: 3px 3px 3px gray;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f1f1f1;
+  width: 250px;
+}
+
+.listbox{
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  width: 68rem;
+  height: auto;
+  overflow-y: auto;
+  justify-content: center;
+  border-left: solid;
+  border-color: #e4e4e4;
+  padding: 10px;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: row;
 }
