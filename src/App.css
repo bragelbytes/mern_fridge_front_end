@@ -38,6 +38,12 @@
 }
 
 /* =========== MY CSS STARTS HERE ============== */
+body{
+  background-color: white;
+  text-align: center;
+  align-content: center;
+}
+
 img{
   width: 100px;
   height: auto;
@@ -46,15 +52,48 @@ img{
 .itembox{
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  justify-content: center;
 }
 
 .item{
-  border-style: solid;
-  border-radius: 5px;
   text-align: center;
   width: 250px;
   height: auto;
-  margin: 15px;
-  padding: 10px;
+  margin: 5px;
+  padding-top: 10px;
+  background-color: white;
+}
+
+.item-info{
+  background-color: #f1f1f1;
+  padding: 5px;
+  width: 239px;
+}
+
+.item, .item-info{
+  box-shadow: 3px 3px 3px gray;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f1f1f1;
+}
+
+p{
+  margin-top: 1px;
+  margin-bottom: 2px;
+  margin-left: 25px;
+  text-align: left;
+}
+
+.item-info > h3{
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.add-item{
+  display: flex;
+  justify-content: center;
+}
+
+label{
+  padding: 2px;
 }

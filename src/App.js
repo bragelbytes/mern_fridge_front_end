@@ -2,6 +2,7 @@ import './App.css'
 import { useState } from 'react'
 import Item from './components/Item'
 import AddItem from './components/AddItem'
+import List from './components/List'
 import UpdateItem from './components/UpdateItem'
 import axios from 'axios'
 import {ItemProvider} from './contexts/ItemContext'
@@ -94,7 +95,10 @@ const App = () => {
       <div className="top-nav">
         <div>
           {toggleLogout
-            ? <button onClick={handleLogout} class="logout-button">Logout</button>
+            ? <>
+              <h4>Welcome {currentUser.username}</h4>
+              <button onClick={handleLogout} class="logout-button">Logout</button>
+              </>
             : <div class="app-form">
                 {toggleLogin
                   ? <div className="form">
@@ -136,10 +140,11 @@ const App = () => {
       </div>
       {currentUser.username ?
       <>
-      <h1>Items</h1>
+      <h1>MERN Fridge</h1>
       <ItemProvider>
         <AddItem />
         <Item />
+        <List />
       </ItemProvider>
       </>
       : null

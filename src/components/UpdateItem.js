@@ -62,16 +62,16 @@ const UpdateItem = (props) => {
         <br/>
         <label>Category: </label>
         <select type="text" onChange={handleNewCategory} placeholder={props.item.category} >
-        <option>Fruits 🍇</option>
-        <option>Vegetables 🥕</option>
-        <option>Dairy 🥛</option>
-        <option>Eggs 🍳</option>
-        <option>Cheese 🧀</option>
-        <option>Meat & Seafood 🍗</option>
-        <option>Beverages 🥤</option>
-        <option>Leftovers 🥡</option>
-        <option>Frozen 🍦</option>
-        <option>Misc. 🍽️</option>
+        <option>Fruits</option>
+        <option>Vegetables</option>
+        <option>Dairy</option>
+        <option>Eggs</option>
+        <option>Cheese</option>
+        <option>Meat & Seafood</option>
+        <option>Beverages</option>
+        <option>Leftovers</option>
+        <option>Frozen</option>
+        <option>Misc.</option>
         </select>
         <br/>
         <label>Expiration: </label>

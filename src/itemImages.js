@@ -10,16 +10,16 @@ import frozen from './images/frozen.png'
 import misc from './images/donut.png'
 
 const images={
-  "Fruits 🍇": fruits,
-  "Vegetables 🥕": veggies,
-  "Dairy 🥛": dairy,
-  "Eggs 🍳": eggs,
-  "Cheese 🧀": cheese,
-  "Meat & Seafood 🍗": meat,
-  "Beverages 🥤": beverages,
-  "Leftovers 🥡": leftovers,
-  "Frozen 🍦": frozen,
-  "Misc. 🍽️": misc
+  "Fruits": fruits,
+  "Vegetables": veggies,
+  "Dairy": dairy,
+  "Eggs": eggs,
+  "Cheese": cheese,
+  "Meat & Seafood": meat,
+  "Beverages": beverages,
+  "Leftovers": leftovers,
+  "Frozen": frozen,
+  "Misc.": misc
 }
 
 export default images

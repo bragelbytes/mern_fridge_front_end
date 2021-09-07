@@ -6,15 +6,15 @@ import images from '../itemImages.js'
 
 const Item = () => {
 
-  const [items, setItems] = useContext(ItemContext)
+  const [items, setItems, getData, list, setList, addItemToList] = useContext(ItemContext)
 
-  const getData = () => {
-    axios
-      .get('http://localhost:3003/items')
-      .then((response) => {
-        setItems(response.data)
-      })
-  }
+  // const getData = () => {
+  //   axios
+  //     .get('http://localhost:3003/items')
+  //     .then((response) => {
+  //       setItems(response.data)
+  //     })
+  // }
 
   const handleDelete = (itemInfo) => {
     axios
@@ -26,18 +26,21 @@ const Item = () => {
 
   return (
     <>
-    <div class="itembox">
+    <div className="itembox">
       {items.map((item) => {
         return (
-          <div class="item">
-            <h3>Name: {item.name}</h3>
-            <p>Brand: {item.brand}</p>
+          <div className="item">
             <img src={images[item.category]}/>
-            <p>Qty: x{item.quantity}</p>
-            <p>Category: {item.category}</p>
-            <p>Exp. Date: {item.expiration.slice(-25, -14)}</p>
-            <button onClick={() => handleDelete(item)}>Delete</button>
-            <UpdateItem item={item}/>
+            <div className="item-info">
+              <h3>{item.name}</h3>
+              <p>Brand: {item.brand}</p>
+              <p>Qty: x{item.quantity}</p>
+              <p>Category: {item.category}</p>
+              <p>Exp. Date: {item.expiration.slice(-25, -14)}</p>
+              <button onClick={() => handleDelete(item)}>Delete</button>
+              <button onClick={() => addItemToList(item)}>Add To List</button>
+              <UpdateItem item={item}/>
+            </div>
           </div>
       )
     })}
