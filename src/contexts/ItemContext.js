@@ -6,7 +6,7 @@ export const ItemContext = createContext()
 export const ItemProvider = (props) => {
   useEffect(() => {
     axios
-      .get('http://localhost:3003/items')
+      .get('https://mern-fridge-back-end.herokuapp.com/items')
       .then((response) => {
         setItems(response.data)
       })
@@ -34,7 +34,7 @@ export const ItemProvider = (props) => {
 
   const getData = () => {
     axios
-      .get('http://localhost:3003/items')
+      .get('https://mern-fridge-back-end.herokuapp.com/items')
       .then((response) => {
         setItems(response.data)
       })

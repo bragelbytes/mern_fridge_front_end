@@ -14,7 +14,7 @@ const AddItem = () => {
     e.preventDefault()
     setItems([...items, item])
     axios
-      .post('http://localhost:3003/items', item)
+      .post('https://mern-fridge-back-end.herokuapp.com/items', item)
       .then(() => {
         getData();
       })

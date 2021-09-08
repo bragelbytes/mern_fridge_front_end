@@ -23,7 +23,7 @@ const App = () => {
     event.currentTarget.reset()
     setUsername('')
     setPassword('')
-    axios.post('http://localhost:3003/users',
+    axios.post('https://mern-fridge-back-end.herokuapp.com/users',
     {
       username:username,
       password:password
@@ -47,7 +47,7 @@ const App = () => {
     event.currentTarget.reset()
     setUsername('')
     setPassword('')
-    axios.put('http://localhost:3003/users',
+    axios.put('https://mern-fridge-back-end.herokuapp.com/users',
     {
       username:username,
       password:password

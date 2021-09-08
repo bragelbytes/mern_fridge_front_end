@@ -17,7 +17,7 @@ const UpdateItem = (props) => {
     event.preventDefault()
     setViewEditModal('')
     axios
-      .put(`http://localhost:3003/items/${itemInfo._id}`,
+      .put(`https://mern-fridge-back-end.herokuapp.com/items/${itemInfo._id}`,
         {
           name:name || itemInfo.name,
           brand:brand || itemInfo.brand,

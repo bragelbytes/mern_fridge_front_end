@@ -18,7 +18,7 @@ const Item = () => {
 
   const handleDelete = (itemInfo) => {
     axios
-      .delete(`http://localhost:3003/items/${itemInfo._id}`)
+      .delete(`https://mern-fridge-back-end.herokuapp.com/items/${itemInfo._id}`)
       .then(() => {
         getData();
       })
