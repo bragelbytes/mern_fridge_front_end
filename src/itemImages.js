@@ -8,6 +8,8 @@ import beverages from './images/beverages.png'
 import leftovers from './images/pizza.png'
 import frozen from './images/frozen.png'
 import misc from './images/donut.png'
+import groceries from './images/groceries.png'
+import foods from './images/foods.png'
 
 const images={
   "Fruits": fruits,
@@ -19,7 +21,9 @@ const images={
   "Beverages": beverages,
   "Leftovers": leftovers,
   "Frozen": frozen,
-  "Misc.": misc
+  "Misc.": misc,
+  "Groceries": groceries,
+  "Foods": foods
 }
 
 export default images

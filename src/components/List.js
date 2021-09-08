@@ -9,6 +9,7 @@ const List = () => {
   return(
     <>
     <div className="listbox">
+      <img src={images["Groceries"]}/>
       <h3>Shopping List</h3>
       {list.map((item) => {
         return(

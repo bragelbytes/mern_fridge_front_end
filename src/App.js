@@ -96,7 +96,7 @@ const App = () => {
         <div>
           {toggleLogout
             ? <>
-              <h4>Welcome {currentUser.username}</h4>
+              <h1>Welcome to {currentUser.username}'s fridge</h1>
               <button onClick={handleLogout} class="logout-button">Logout</button>
               </>
             : <div class="app-form">
@@ -140,7 +140,6 @@ const App = () => {
       </div>
       {currentUser.username ?
       <>
-      <h1>MERN Fridge</h1>
       <ItemProvider>
         <AddItem />
         <div className="main-container">

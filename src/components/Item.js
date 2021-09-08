@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import {ItemContext} from '../contexts/ItemContext'
-import UpdateItem from './UpdateItem'
+import UpdateItem, {toggleEdit} from './UpdateItem'
 import axios from 'axios'
 import images from '../itemImages.js'
 

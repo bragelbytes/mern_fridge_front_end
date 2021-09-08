@@ -22,7 +22,6 @@ const AddItem = () => {
 
   return (
     <>
-
     <h2>What do we have?</h2>
     <div class="add-item">
       <label> Name:  </label>

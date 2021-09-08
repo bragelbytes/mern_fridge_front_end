@@ -39,7 +39,7 @@
 
 /* =========== MY CSS STARTS HERE ============== */
 body{
-  background-color: white;
+  background-color: #c2d5da;
   text-align: center;
   align-content: center;
 }
@@ -75,7 +75,7 @@ img{
 .item{
   margin: 5px;
   width: 250px;
-  height: 250px;
+  height: 235px;
 }
 
 p{
@@ -116,12 +116,35 @@ label{
   height: auto;
   overflow-y: auto;
   justify-content: center;
+  align-items: center;
   border-left: solid;
-  border-color: #e4e4e4;
+  border-color: #807f7f;
   padding: 10px;
 }
 
 .main-container{
   display: flex;
   flex-direction: row;
+}
+
+.edit-modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom:0;
+  background-color: rgb(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-modal > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgb(244,244,244,.85);
+  text-align: left;
+  width: 500px;
+  height: 500px;
 }

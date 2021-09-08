@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react'
 import {ItemContext} from '../contexts/ItemContext'
 import axios from 'axios'
+import images from '../itemImages.js'
 
 const UpdateItem = (props) => {
   const [items, setItems, getData] = useContext(ItemContext)
@@ -10,9 +11,11 @@ const UpdateItem = (props) => {
   const [quantity, setQuantity] = useState('')
   const [category, setCategory] = useState('')
   const [expiration, setExpiration] = useState('')
+  const [viewEditModal, setViewEditModal] = useState('')
 
   const handleUpdate = (event, itemInfo) => {
     event.preventDefault()
+    setViewEditModal('')
     axios
       .put(`http://localhost:3003/items/${itemInfo._id}`,
         {
@@ -47,10 +50,20 @@ const UpdateItem = (props) => {
   const handleNewExpiration = (event) => {
     setExpiration(event.target.value);
   }
+  const toggleEdit = (event) => {
+    setViewEditModal(event.target.value)
+  }
+  const closeEdit = (event) => {
+    setViewEditModal('')
+  }
 
   return (
-    <details>
+    <>
+    <button value={props.item._id} onClick={toggleEdit}>Edit</button>
+    {viewEditModal === props.item._id &&
+    <div className="edit-modal">
       <form onSubmit={(event) => handleUpdate(event, props.item)}>
+        <img src={images["Foods"]}/>
         <label>Name: </label>
         <input type="text" onChange={handleNewName} defaultValue={props.item.name} />
         <br/>
@@ -78,8 +91,11 @@ const UpdateItem = (props) => {
         <input type="date" onChange={handleNewExpiration} placeholder={props.item.expiration} />
         <br/>
         <input type="submit" />
+        <button onClick={closeEdit}>Close</button>
       </form>
-    </details>
+    </div>
+    }
+    </>
   )
 
 }
